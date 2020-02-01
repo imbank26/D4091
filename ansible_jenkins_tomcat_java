@@ -1,0 +1,864 @@
+histroy -c ----clean all histroy
+
+[root@master ~]# history
+    1  yum update -y
+    2  vi /etc/hostname
+    3  hostname master
+    4  exec bash
+    5  clear
+    6  yum install ansible
+    7  amazon-linux-extras install ansible2
+    8  cd
+    9  ls
+   10  ls -a
+   11  ssh-keygen -t rsa
+   12  cd .ssh/
+   13  ls
+   14  cat id_rsa.pub
+   15  cat>>authorized_keys
+   16  cd
+   17  clear
+   18  ls
+   19  cd /etc/ansible/
+   20  ls
+   21  ansible -m ping localhost
+   22  clear
+   23  cd /etc/ansible/
+   24  cd playbooks/
+   25  mkdir -p AWS_Ansible/group_vars/all/
+   26  cd AWS_Ansible
+   27  touch playbook.yml
+   28  ansible-vault create group_vars/all/pass.yml
+   29  cd ..
+   30  ls
+   31  AWS_Ansible tree
+   32  yum install tree -y
+   33  AWS_Ansible tree
+   34  tree AWS_Ansible
+   35  clear
+   36  ls
+   37  cd AWS_Ansible/
+   38  ls
+   39  cat playbook.yml
+   40  cd group_vars/
+   41  ls
+   42  cd all/
+   43  ls
+   44  cat pass.yml
+   45  cd ..
+   46  clear
+   47  ls
+   48  vi palybook.yml
+   49  ansible-playbook playbook.yml --ask-vault-pass
+   50  ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2
+   51  cd ..
+   52  ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2
+   53  ls
+   54  cd ..
+   55  pwd
+   56  cd playbooks/
+   57  cd AWS_Ansible/
+   58  ansible-playbook -i /etc/ansible/hosts playbook.yml --ask-vault-pass --ta                          gs create_ec2
+   59  cat playbook.yml
+   60  vi playbook.yml
+   61  ansible-playbook -i /etc/ansible/hosts playbook.yml --ask-vault-pass
+   62  ansible-playbook -i /etc/ansible/hosts playbook.yml --ask-vault-pass --ta                          gs create_ec2
+   63  clear
+   64  cd ..
+   65  ansible-playbook -i /etc/ansible/hosts /etc/ansible/playbooks/AWS_Ansible                          /playbook.yml --ask-vault-pass --tags create_ec2
+   66  ansible-playbook -i /etc/ansible/hosts /etc/ansible/playbooks/AWS_Ansible                          /playbook.yml --ask-vault-pass
+   67  cd AWS_Ansible/
+   68  cd group_vars/
+   69  cd all/
+   70  vi pass.yml
+   71  ansible-vault edit group_vars/all/pass.yml
+   72  cd ..
+   73  ansible-vault create group_vars/all/pass.yml
+   74  ansible-vault edit group_vars/all/pass.yml
+   75  rm pass.yml
+   76  ls
+   77  rm group_vars/all/pass.yml
+   78  ls
+   79  ansible-vault create group_vars/all/pass.yml
+   80  ansible-vault edit group_vars/all/pass.yml
+   81  clear
+   82  cd
+   83  cd .ssh
+   84  pwd
+   85  cd /etc/ansible/playbooks/AWS_Ansible/ansible-playbook playbook.yml --ask                          -vault-pass --tags create_ec2
+   86  ansible-playbook playbook.yml --ask-vault-pass
+   87  ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2
+   88  ls
+   89  vi playbook.yml
+   90  ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2
+   91  ls
+   92  vi playbook.yml
+   93  ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2
+   94  ls
+   95  mv playbook.yml play.yml
+   96  ls
+   97  vi play.yml
+   98  ansible-playbook play.yml --ask-vault-pass --tags create_ec2
+   99  vi play.yml
+  100  ansible-playbook play.yml --ask-vault-pass --tags create_ec2
+  101  vi play.yml
+  102  ansible-playbook play.yml --ask-vault-pass --tags create_ec2
+  103  ansible-playbook play.yml --ask-vault-pass
+  104  ssh -i "my_aws.pem" ubuntu@ec2-3-17-72-88.us-east-2.compute.amazonaws.com
+  105  ls
+  106  ssh -i ~/.ssh/my_aws ubuntu@ec2-3-17-72-88.us-east-2.compute.amazonaws.co                          m
+  107  ssh -i "my_aws.pem" ubuntu@ec2-3-17-72-88.us-east-2.compute.amazonaws.com
+  108  ssh ubuntu@ec2-3-17-72-88.us-east-2.compute.amazonaws.com
+  109  ssh-copy-id root@3.17.72.88
+  110  ssh-copy-id ubuntu@3.17.72.88
+  111  vi play.yml
+  112  ls
+  113  cd /etc/ansible/
+  114  ls
+  115  cd playbooks/
+  116  ls
+  117  touch ansible.pem
+  118  cat>>ansible.pem
+  119  clear
+  120  ls
+  121  cd AWS_Ansible/
+  122  ls
+  123  cd ..
+  124  mv ansible.pem AWS_Ansible/
+  125  cd AWS_Ansible/
+  126  ls
+  127  rm playbook.yml
+  128  ls
+  129  vi play.yml
+  130  ansible-playbook playbook.yml --ask-vault-pass --tags create_ec2
+  131  ansible-playbook play.yml --ask-vault-pass --tags create_ec2
+  132  ansible-playbook play.yml --ask-vault-pass
+  133  chmod 400 ansible.pem
+  134  ssh -i "ansible.pem" ec2-user@ec2-3-83-212-97.compute-1.amazonaws.com
+  135  vi play.yml
+  136  ansible-playbook play.yml --ask-vault-pass --tags create_ec2
+  137  vi play.yml
+  138  ansible-playbook play.yml --ask-vault-pass --tags create_ec2
+  139  vi play.yml
+  140  ansible-playbook play.yml --ask-vault-pass --tags create_ec2
+  141  vi play.yml
+  142  vi ec2.yml
+  143  ansible-playbook ec2.yml --ask-vault-pass --tags create_ec2
+  144  ansible-playbook ec2.yml --ask-vault-pass
+  145  ssh -i "ansible.pem" ec2-user@ec2-35-153-201-247.compute-1.amazonaws.com
+  146  cd /etc/ansible/playbooks/AWS_Ansible/
+  147  ansible-playbook ec2.yml --ask-vault-pass --tags create_ec2
+  148  ssh -i ".pem" ec2-user@ec2-54-91-98-14.compute-1.amazonaws.com
+  149  vi awsec2.yml
+  150  ansible-playbook awsec2.yml  --ask-vault-pass --tags create_ec2
+  151  vi awsec2.yml
+  152  ansible-playbook awsec2.yml  --ask-vault-pass --tags create_ec2
+  153  ansible-playbook awsec2.yml  --ask-vault-pass
+  154  ssh -i "ansible.pem" ec2-user@ec2-54-144-211-69.compute-1.amazonaws.com
+  155  clear
+  156  ls
+  157  cd /etc/ansible/playbooks/
+  158  ls
+  159  cat aws_ec2_spinup.yaml
+  160  cd AWS_Ansible/
+  161  ls
+  162  cat palybook.yml
+  163  cat play.yml
+  164  cat palybook.yml
+  165  cd
+  166  cd .ssh
+  167  pwd
+  168  cd /etc/ansible/
+  169  clear
+  170  ls
+  171  cd playbooks/
+  172  ls
+  173  rm aws_ec2_spinup.yaml
+  174  ls
+  175  cd AWS_Ansible/
+  176  ls
+  177  cat ec2.yml
+  178  clear
+  179  ls
+  180  vi awsec2.yml
+  181  ansible-playbook awsec2.yml --ask-vault-pass --tags create_ec2
+  182  rm awsec2.yml
+  183  vi awsec2.yml
+  184  ansible-playbook awsec2.yml --ask-vault-pass --tags create_ec2
+  185  ansible-playbook --syntax-check awsec2.yml
+  186  vi awsec2.yml
+  187  ansible-playbook --syntax-check awsec2.yml
+  188  ansible-playbook awsec2.yml --ask-vault-pass --tags create_ec2
+  189  vi awsec2.yml
+  190  ansible-playbook awsec2.yml --ask-vault-pass --tags create_ec2
+  191  vi awsec2.yml
+  192  ansible-playbook awsec2.yml --ask-vault-pass --tags create_ec2
+  193  vi awsec2.yml
+  194  rm awsec2.yml
+  195  vi awsec2.yml
+  196  ansible-playbook --syntax-error awsec2.yml
+  197  ansible-playbook --syntax-check awsec2.yml
+  198  vi awsec2.yml
+  199  ansible-playbook --syntax-check awsec2.yml
+  200  ansible-playbook awsec2.yml --ask-vault-pass --tags create_ec2
+  201  vi awsec2.yml
+  202  ansible-playbook awsec2.yml --ask-vault-pass --tags create_ec2
+  203  cd
+  204  cd .ssh
+  205  ls
+  206  cat id_rsa.pub
+  207  vi awsec2.yml
+  208  cd /etc/ansible/playbooks/AWS_Ansible/
+  209  cat id_rsa.pub
+  210  vi awsec2.yml
+  211  ansible-playbook awsec2.yml --ask-vault-pass --tags create_ec2
+  212  vi awsec2.yml
+  213  rm awsec2.yml
+  214  vi awsec2.yml
+  215  ansible-playbook awsec2.yml --ask-vault-pass --tags create_ec2
+  216  ansible-playbook awsec2.yml --ask-vault-pass
+  217  ssh -i "ansible.pem" ec2-user@ec2-18-234-164-12.compute-1.amazonaws.com
+  218  cd /etc/ansible/playbooks/AWS_Ansible/
+  219  chmod 400 ansible.pem
+  220  ssh -i "ansible.pem" ec2-user@ec2-35-153-201-247.compute-1.amazonaws.coms                          sh -i "ansible.pem" ec2-user@ec2-18-234-164-12.compute-1.amazonaws.com
+  221  ssh root@18.234.164.12
+  222  ansible-playbook ec2.yml --ask-vault-pass
+  223  ssh -i "ansible.pem" @ec2-18-234-164-12.compute-1.amazonaws.com
+  224  ssh -i "ansible.pem" ec2-user@ec2-18-234-164-12.compute-1.amazonaws.com
+  225  vi awsec2.yml
+  226  rm awsec2.yml
+  227  vi awsec2.yml
+  228  ansible-playbook --syntax-check awsec2.yml
+  229  ansible-playbook awsec2.yml --ask-vault-pass --tags create_ec2
+  230  ansible-playbook awsec2.yml --ask-vault-pass
+  231  ansible-playbook awsec2.yml --ask-vault-pass --tags create_ec2
+  232  ansible-playbook awsec2.yml --ask-vault-pass
+  233  ansible-playbook awsec2.yml --ask-vault-pass --tags create_ec2
+  234  vi awsec2.yml
+  235  ansible-playbook awsec2.yml --ask-vault-pass --tags create_ec2
+  236  vi awsec2.yml
+  237  ansible-playbook awsec2.yml --ask-vault-pass --tags create_ec2
+  238  vi awsec2.yml
+  239  ansible-playbook awsec2.yml --ask-vault-pass --tags create_ec2
+  240  ansible-playbook awsec2.yml --ask-vault-pass
+  241  ssh -i "ansible.pem" ubuntu@ec2-54-208-54-246.compute-1.amazonaws.com
+  242  cd /root/.ssh
+  243  ls
+  244  rm known_hosts
+  245  cd /etc/ansible/playbooks/AWS_Ansible/
+  246  ssh -i "ansible.pem" ubuntu@ec2-54-208-54-246.compute-1.amazonaws.com
+  247  ls
+  248  rm awsec2.yml
+  249  vi awsec2.yml
+  250  ansible-playbook awsec2.yml --ask-vault-pass --tags create_ec2
+  251  vi awsec2.yml
+  252  ansible-playbook awsec2.yml --ask-vault-pass --tags create_ec2
+  253  ssh -i "ansible.pem" ec2-user@ec2-54-90-73-104.compute-1.amazonaws.com
+  254  chmod 600 ansible.pem
+  255  ssh -i "ansible.pem" ec2-user@ec2-54-90-73-104.compute-1.amazonaws.com
+  256  ssh-keygen - 54.173.11.22
+  257  ssh-keygen -R 54.173.11.22
+  258  ssh -i "ansible.pem" ec2-user@ec2-54-173-11-22.compute-1.amazonaws.com
+  259  cd /etc/ansible/playbooks/AWS_Ansible/
+  260  ls
+  261  ssh -i "ansible.pem" ec2-user@ec2-54-173-11-22.compute-1.amazonaws.com
+  262  rm ansible.pem
+  263  ssh -i "ansible.pem" ec2-user@ec2-54-173-11-22.compute-1.amazonaws.com
+  264  clear
+  265  ls
+  266  rm ec2.yml
+  267  rm play.yml
+  268  rm playbook.yml
+  269  ls
+  270  clear
+  271  ls
+  272  cat awsec2.yml
+  273  ls
+  274  cd /etc/ansible/
+  275  cd playbooks/
+  276  ls
+  277  cd AWS_Ansible/
+  278  ls
+  279  ansible-playbook awsec2.yml --ask-valut-pass
+  280  ansible-playbook awsec2.yml --ask-vault-pass
+  281  ansible ping 184.72.191.80
+  282  ansible -m ping 184.72.191.80
+  283  clear
+  284  Ansible 184.72.191.80 -a “/sbin/reboot” -f 10 -u username
+  285  ansible 184.72.191.80 -a “/sbin/reboot” -f 10 -u username
+  286  ssh root@184.72.191.80
+  287  ssh ec2-user@184.72.191.80
+  288  cat /etc/hosts
+  289  vi /etc/hosts
+  290  ansible -m ping master
+  291  ansible -m ping localhost
+  292  cd ..
+  293  ls
+  294  vi hosts
+  295  ansible -m ping localhost
+  296  ansible -m ping master
+  297  ansible -m ping agent_webserver
+  298  vi /etc/hosts
+  299  vi hosts
+  300  ansible -m ping webserver
+  301  vi hosts
+  302  ansible -m ping 184.72.191.80
+  303  cd playbooks/
+  304  vi packag.yml
+  305  ansible-playbook packag.yml
+  306  ansible -m ping 184.72.191.80
+  307  vi movefile.yml
+  308  ansible-playbook movefile.yml
+  309  ls
+  310  touch ec2.yml
+  311  ansible-playbook movefile.yml
+  312  cat movefile.yml
+  313  ssh ec2-user@184.72.191.80
+  314  ls
+  315  vi movefile.yml
+  316  ansible-playbook movefile.yml
+  317  ansible 184.72.191.80 -m file -a 'path=/root/xyz.txt state=touch' -u root
+  318  ansible 184.72.191.80 -m file -a 'path=/root/xyz.txt state=touch' -u ec2-                          user
+  319  ansible 184.72.191.80 -m file -a 'path=/home/ec2-user/xyz.txt state=touch                          ' -u ec2-user
+  320  ssh root@184.72.191.80
+  321  ssh ec2-user@184.72.191.80
+  322  clear
+  323  ls
+  324  vi movefile.yml
+  325  ansible-playbook movefile.yml
+  326  vi movefile.yml
+  327  ansible-playbook movefile.yml
+  328  cd /etc/ansible/playbooks/AWS_Ansible/
+  329  clear
+  330  ls
+  331  rm palybook.yml
+  332  ls
+  333  vi awsec2.yml
+  334  ansible-playbook awsec2.yml  --ask-vault-pass --tags create_ec2
+  335  ansible-playbook awsec2.yml  --ask-vault-pass
+  336  ssh -i "ansible.pem" ec2-user@ec2-184-72-191-80.compute-1.amazonaws.com
+  337  ls
+  338  vi awsec2.yml
+  339  ansible-playbook awsec2.yml  --ask-vault-pass --tags create_ec2
+  340  vi ec2.yml
+  341  ansible-playbook ec2.yml
+  342  ansible-playbook ec2.yml  --ask-vault-pass
+  343  ansible-playbook --syntax-check ec2.yml
+  344  vi ec2.yml
+  345  ansible-playbook ec2.yml  --ask-vault-pass
+  346  ansible-playbook --syntax-check ec2.yml
+  347  vi ec2.yml
+  348  ansible-playbook --syntax-check ec2.yml
+  349  rm ec2.yml
+  350  vi ec2.yml
+  351  ansible-playbook --syntax-check ec2.yml
+  352  vi ec2.yml
+  353  ansible-playbook --syntax-check ec2.yml
+  354  vi ec2.yml
+  355  ansible-playbook --syntax-check ec2.yml
+  356  vi ec2.yml
+  357  ansible-playbook --syntax-check ec2.yml
+  358  vi ec2.yml
+  359  rm ec2.yml
+  360  vi ec2.yml
+  361  ansible-playbook --syntax-check ec2.yml
+  362  vi ec2.yml
+  363  ansible-playbook --syntax-check ec2.yml
+  364  cd /etc/ansible/playbooks/
+  365  ls
+  366  cat packag.yml
+  367  ansible-playbook ec2.yml  --ask-vault-pass
+  368  cat ec2.yml
+  369  cd AWS_Ansible/
+  370  ansible-playbook ec2.yml  --ask-vault-pass
+  371  ls
+  372  ansible-playbook awsec2.yml  --ask-vault-pass
+  373  ssh ec2-user@18.207.195.183
+  374  vi /etc/hosts
+  375  vi /etc/ansible/hosts
+  376  ansible -m ping agent
+  377  cd ..
+  378  ansible -m ping agent
+  379  ssh ec2-user@agent
+  380  ssh ec2-user@18.207.195.183
+  381  ls
+  382  cat packag.yml
+  383  vi docker.yml
+  384  ansible-playbook docker.yml
+  385  vi docker.yml
+  386  ansible-playbook docker.yml
+  387  ssh ec2-user@18.207.195.183
+  388  ansible-playbook docker.yml
+  389  ansible -m ping agent
+  390  ansible -m ping webserver
+  391  ssh ec2-user@agent
+  392  ssh ec2-user@agent
+  393  ansible -m ping agent
+  394  ssh ec2-user@18.207.195.183
+  395  ls
+  396  ssh-copy-id -f root@172.31.90.250
+  397  ansible -m ping agent
+  398  ssh root@agent
+  399  ssh ec2-user@agent
+  400  ssh ec2-user@18.207.195.183
+  401  ssh root@agent
+  402  ansible -m ping agent
+  403  clear
+  404  ssh-copy-id -f root@172.31.92.52
+  405  ssh root@172.31.92.52
+  406  ssh ec2-user@52.90.113.234
+  407  ssh root@172.31.92.52
+  408  vi /etc/hosts
+  409  ssh root@agent
+  410  cd /etc/ansible/
+  411  ssh root@172.31.92.52
+  412  vi hosts
+  413  ansible -m ping agent
+  414  ssh ec2-user@52.90.113.234
+  415  ansible -m ping agent
+  416  ssh ec2-user@52.90.113.234
+  417  ansible -m ping agent
+  418  ssh ec2-user@52.90.113.234
+  419  ansible -m ping master
+  420  ansible -m ping webserveransible -m ping agent
+  421  ansible -m ping agent
+  422  ping agent
+  423  ping ansible
+  424  vi hosts
+  425  ping master
+  426  ping agent
+  427  ping 172.31.92.52
+  428  cd
+  429  cd .ssh/
+  430  ls
+  431  cat id_rsa.pub
+  432  cat authorized_keys
+  433  ping agent
+  434  clear
+  435  vi /etc/hosts
+  436  cd /etc/ansible/
+  437  vi hosts
+  438  ping lb
+  439  ansible -m ping lb
+  440  ssh-copy-id -f root@172.31.84.49
+  441  ssh root@lb
+  442  ssh root@172.31.84.49
+  443  ssh ec2-user@172.31.84.49
+  444  ansible -m ping lb
+  445  ssh root@lb
+  446  vi /etc/hosts
+  447  ansible -m ping lb
+  448  ansible lb -m ping -u root
+  449  ansible lb -m ping -u ec2-user
+  450  ssh root@lb
+  451  ssh ec2-user@lb
+  452  clear
+  453  vi /etc/hosts
+  454  vi hosts
+  455  mv hosts hosts.bkp
+  456  vi hosts
+  457  cd playbooks/
+  458  cd AWS_Ansible/
+  459  ls
+  460  cat ec2.yml
+  461  clear
+  462  ls
+  463  ansible-playbook awsec2.yml --ask-vault-pass --tag:ec2_create
+  464  ansible-playbook awsec2.yml  --ask-vault-pass --tags create_ec2
+  465  vi awsec2.yml
+  466  ansible-playbook awsec2.yml  --ask-vault-pass --tags create_ec2
+  467  vi awsec2.yml
+  468  ansible-playbook awsec2.yml  --ask-vault-pass --tags create_ec2
+  469  vi awsec2.yml
+  470  ansible-playbook awsec2.yml  --ask-vault-pass --tags create_ec2
+  471  vi awsec2.yml
+  472  ansible-playbook awsec2.yml  --ask-vault-pass --tags create_ec2
+  473  ansible-playbook awsec2.yml  --ask-vault-pass
+  474  ssh ec2-user@54.175.220.83
+  475  vi /etc/hosts
+  476  ansible -m ping agent
+  477  cd ..
+  478  ansible -m ping agent
+  479  ansible agent -m ping -u ec2-useer
+  480  ansible agent -m ping -u ec2-user
+  481  ssh root@agent
+  482  ssh ec2-user@agent
+  483  ls
+  484  clear
+  485  ls
+  486  cat movefile.yml
+  487  cd ..
+  488  vi hosts
+  489  cd playbooks/
+  490  ansible-playbook movefile.yml
+  491  ansible-playbook -i /etc/ansible/hosts movefile.yml
+  492  cat movefile.yml
+  493  vi movefile.yml
+  494  ansible-playbook -i /etc/ansible/hosts movefile.yml
+  495  vi movefile.yml
+  496  ansible-playbook -i /etc/ansible/hosts movefile.yml
+  497  ls
+  498  cat packag.yml
+  499  vi packag.yml
+  500  ansible-playbook -i /etc/ansible/hosts packag.yml
+  501  vi movefile.yml
+  502  ansible-playbook -i /etc/ansible/hosts movefile.yml
+  503  vi movefile.yml
+  504  ansible-playbook -i /etc/ansible/hosts movefile.yml
+  505  ssh ec2-user@agent
+  506  vi movefile.yml
+  507  vi packag.yml
+  508  ansible-playbook -i /etc/ansible/hosts packag.yml
+  509  ssh ec2-user@agent
+  510  vi packag.yml
+  511  ansible-playbook -i /etc/ansible/hosts packag.yml
+  512  vi packag.yml
+  513  ansible-playbook -i /etc/ansible/hosts packag.yml
+  514  vi packag.yml
+  515  ansible-playbook -i /etc/ansible/hosts packag.yml
+  516  vi packag.yml
+  517  ansible-playbook -i /etc/ansible/hosts packag.yml
+  518  ssh ec2-user@agent
+  519  ls
+  520  clear
+  521  ls
+  522  cat packag.yml
+  523  vi movefile.yml
+  524  ansible-playbook -i /etc/ansible/hosts movefile.yml
+  525  vi movefile.yml
+  526  ls
+  527  cat ec2.yml
+  528  rm ec2.yml
+  529  mkdir mv
+  530  touch mv/file1
+  531  touch mv/file2
+  532  ls -ltr mv/
+  533  vi movefile.yml
+  534  ansible-playbook -i /etc/ansible/hosts movefile.yml
+  535  vi movefile.yml
+  536  ansible-playbook -i /etc/ansible/hosts movefile.yml
+  537  vi movefile.yml
+  538  ansible-playbook -i /etc/ansible/hosts movefile.yml
+  539  vi movefile.yml
+  540  vi directory.yml
+  541  ansible-playbook -i /etc/ansible/hosts directory.yml
+  542  vi directory.yml
+  543  ansible-playbook -i /etc/ansible/hosts directory.yml
+  544  vi directory.yml
+  545  ansible-playbook -i /etc/ansible/hosts directory.yml
+  546  vi movefile.yml
+  547  vi directory.yml
+  548  ansible-playbook -i /etc/ansible/hosts directory.yml
+  549  vi directory.yml
+  550  touch hello1
+  551  touch hello2
+  552  ansible-playbook -i /etc/ansible/hosts directory.yml
+  553  vi copy.yml
+  554  mkdir subfolder
+  555  touch subfolder/hello44
+  556  touch subfolder/hello4
+  557  touch hello3
+  558  ansible-playbook -i /etc/ansible/hosts copy.yml
+  559  vi copy.yml
+  560  ansible-playbook -i /etc/ansible/hosts copy.yml
+  561  rm copy.yml
+  562  vi copy.yml
+  563  ansible-playbook -i /etc/ansible/hosts copy.yml
+  564  ansible-playbook awsec2.yml  --ask-vault-pass --tags create_ec2
+  565  cd /etc/ansible/playbooks/AWS_Ansible/
+  566  ansible-playbook awsec2.yml  --ask-vault-pass --tags create_ec2
+  567  ssh ec2-user@3.83.207.112
+  568  vi /etc/hosts
+  569  rm /root/.ssh/known_hosts
+  570  ls
+  571  cd ..
+  572  ls
+  573  cat install.yml
+  574  ansible-playbook -i /etc/ansible/hosts install.yml
+  575  docker --version
+  576  docker -version
+  577  vi install.yml
+  578  ansible-playbook -i /etc/ansible/hosts install.yml
+  579  vi install.yml
+  580  rm install.yml
+  581  vi install.yml
+  582  ansible-playbook -i /etc/ansible/hosts install.yml
+  583  vi install.yml
+  584  rm install.yml
+  585  vi install.yml
+  586  ansible-playbook -i /etc/ansible/hosts install.yml
+  587  vi install.yml
+  588  ansible-playbook -i /etc/ansible/hosts install.yml
+  589  vi install.yml
+  590  ansible-playbook -i /etc/ansible/hosts install.yml
+  591  vi install.yml
+  592  ls
+  593  cd mv/
+  594  ls
+  595  cat docker.yml
+  596  cd ..
+  597  vi docker.yml
+  598  ansible-playbook -i /etc/ansible/hosts docker.yml
+  599  vi install.yml
+  600  ssh ec2-user@agent
+  601  ls
+  602  mv install.yml mv/
+  603  mv install_docker.yml mv/
+  604  ls
+  605  mv directory.yml mv/
+  606  mv movefile.yml mv/
+  607  mv copy.yml  mv/
+  608  claear
+  609  clear
+  610  ls
+  611  cd AWS_Ansible/
+  612  ls
+  613  ansible-playbook awsec2.yml --ask-vault-pass --tags create-ec2
+  614  vi awsec2.yml
+  615  ansible-playbook awsec2.yml --ask-vault-pass --tags create-ec2
+  616  vi awsec2.yml
+  617  ansible-playbook awsec2.yml --ask-vault-pass --tags create-ec2
+  618  history
+  619   ansible-playbook awsec2.yml  --ask-vault-pass --tags create_ec2
+  620  vi /etc/hosts
+  621  rm /root/.ssh/known_hosts
+  622  ssh -i "ansible.pem" ec2-user@ec2-34-226-141-170.compute-1.amazonaws.com
+  623  cd ..
+  624  ls
+  625  ansible-playbook -i /etc/ansible/hosts docker.yml
+  626  cd mv/
+  627  ls
+  628  cat install_docker.yml
+  629  cd ..
+  630  ls
+  631  vi install_dockerpy.yml
+  632  ansible-playbook -i /etc/ansible/hosts install_dockerpy.yml
+  633  ls
+  634  ansible-playbook -i /etc/ansible/hosts pullimage.yml
+  635  vi install_dockerpy.yml
+  636  ansible-playbook -i /etc/ansible/hosts install_dockerpy.yml
+  637  ansible-playbook -i /etc/ansible/hosts pullimage.yml
+  638  vi install_dockerpy.yml
+  639  ansible-playbook -i /etc/ansible/hosts install_dockerpy.yml
+  640  vi install_dockerpy.yml
+  641  ansible-playbook -i /etc/ansible/hosts install_dockerpy.yml
+  642  ls
+  643  vi install_dockerpy.yml
+  644  ansible-playbook -i /etc/ansible/hosts install_dockerpy.yml
+  645  vi install_dockerpy.yml
+  646  ansible-playbook -i /etc/ansible/hosts install_dockerpy.yml
+  647  exit\
+  648  ssh root@agent
+  649  ssh ec2-user@agent
+  650  ping agent
+  651  ssh root@agent
+  652  ssh ec2-user@agent
+  653  ssh root@agent
+  654  ssh ec2-user@agent
+  655  ssh root@agent
+  656  ping agent
+  657  clear
+  658  java -version
+  659  cd /etc/ansible/
+  660  ls
+  661  cd playbooks/
+  662  ls
+  663  clear
+  664  ls
+  665  cat packag.yml
+  666  vi docker.yml
+  667  ansible-playbook -i /etc/ansible/hosts docker.yml
+  668  ansible-playbook -i /etc/ansible/hosts packag.yml
+  669  vi docker.yml
+  670  ansible-playbook -i /etc/ansible/hosts docker.yml
+  671  ssh ec2-user@agent
+  672  clear
+  673  ls
+  674  vi pullimage.yml
+  675  ansible-playbook -i /etc/ansible/hosts pullimage.yml
+  676  vi pullimage.yml
+  677  ansible-playbook -i /etc/ansible/hosts pullimage.yml
+  678  vi docker.yml
+  679  ansible-playbook -i /etc/ansible/hosts docker.yml
+  680  vi docker.yml
+  681  ansible-playbook -i /etc/ansible/hosts docker.yml
+  682  vi install_docker.yml
+  683  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  684  vi install_docker.yml
+  685  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  686  vi install_docker.yml
+  687  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  688  vi install_docker.yml
+  689  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  690  vi install_docker.yml
+  691  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  692  vi install_docker.yml
+  693  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  694  vi install_docker.yml
+  695  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  696  vi install_docker.yml
+  697  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  698  ls
+  699  cat pullimage.yml
+  700  ansible-playbook -i /etc/ansible/hosts pullimage.yml
+  701  ls
+  702  cat docker.yml
+  703  mv docker.yml mv/
+  704  ls
+  705  cat packag.yml
+  706  mv packag.yml mv/
+  707  ls
+  708  mv hello1 hello2 mv/
+  709  ls
+  710  cat movefile.yml
+  711  clear
+  712  ls
+  713  cd AWS_Ansible/
+  714  ls
+  715  cat ec2.yml
+  716  vi awsec2.yml
+  717  ansible-playbook awsec2.yml --ask-vault-pass --tags:ec2_create
+  718  ansible-playbook awsec2.yml  --ask-vault-pass --tags create_ec2
+  719  ssh ec2-user@35.171.3.2
+  720  cd ..
+  721  vi /etc/hosts
+  722  ls
+  723  vi install_docker.yml
+  724  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  725  rm /root/.ssh/known_hosts
+  726  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  727  vi install_docker.yml
+  728  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  729  vi install_docker.yml
+  730  ls
+  731  ansible-playbook -i /etc/ansible/hosts pullimage.yml
+  732  vi install_docker.yml
+  733  ansible-playbook -i /etc/ansible/hosts pullimage.yml
+  734  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  735  vi install_docker.yml
+  736  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  737  ansible-playbook -i /etc/ansible/hosts pullimage.yml
+  738  ssh ec2-user@agent
+  739  vi install_docker.yml
+  740  ansible-playbook -i /etc/ansible/hosts pullimage.yml
+  741  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  742  vi install_docker.yml
+  743  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  744  vi install_docker.yml
+  745   pip list --format=freeze
+  746  pip install docker-py
+  747  docker-py --version
+  748  docker-py -version
+  749   pip list --format=freeze
+  750  pip install docker
+  751   pip list --format=freeze
+  752  vi install_docker.yml
+  753  clear
+  754  vi install_docker.yml
+  755  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  756  ansible-playbook -i /etc/ansible/hosts pullimage.yml
+  757  ssh ec2-user@agent
+  758  vi install_docker.yml
+  759  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  760  vi install_docker.yml
+  761  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  762  vi install_docker.yml
+  763  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  764  vi install_docker.yml
+  765  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  766  vi install_docker.yml
+  767  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  768  vi install_docker.yml
+  769  ansible-playbook -i /etc/ansible/hosts install_docker.yml
+  770  cat install_docker.yml
+  771  vi install.yml
+  772  ansible-playbook -i /etc/ansible/hosts install.yml
+  773  cd AWS_Ansible/
+  774  vi awsec2.yml
+  775  cd /tmp/
+  776  ls
+  777  rpm -ivh jdk-8u201-linux-x64.rpm
+  778  rpm -ivh jdk-8u211-linux-x64.rpm
+  779  cd /usr/java/jdk1.8.0_211-amd64/
+  780  pwd
+  781  cd /rootcd /root
+  782  cd /root
+  783  vi .bash_profile
+  784  source .bash_profile
+  785  start
+  786  alias start='/opt/tomcat8/bin/startup.sh'
+  787  alias stop='/opt/tomcat8/bin/shutdown.sh'
+  788  stop
+  789  start
+  790  stop
+  791  cd /var/lib/jenkins/
+  792  service jenkins start
+  793  service jenkins status
+  794  jenkins --verstion
+  795  jenkins -verstion
+  796  yum install jenkins
+  797  service jenkins status
+  798  service jenkins stop
+  799  service jenkins start
+  800  sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-                          stable/jenkins.repo
+  801  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+  802  service jenkins stop
+  803  service jenkins start
+  804  clear
+  805  java --version
+  806  java -version
+  807  ls
+  808  cdcd
+  809  start
+  810  cat /var/lib/jenkins/secrets/initialAdminPassword
+  811  stop
+  812  service jenkins start
+  813  service jenkins restart
+  814  echo $JAVA_HOME
+  815  wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat/jenki                          ns.repo
+  816  yum update
+  817  rpm --import https://pkg.jenkins.io/redhat/jenkins.io.key
+  818  yum update
+  819  wget https://pkg.jenkins.io/redhat-stable/jenkins-2.138.1-1.1.noarch.rpm
+  820  ls
+  821  rpm -ivh jenkins-2.138.1-1.1.noarch.rpm
+  822  service jenkins status
+  823  service jenkins stop
+  824  service jenkins start
+  825  clear
+  826  wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.0/binaries/a                          pache-maven-3.6.0-bin.tar.gz
+  827  wget http://mirrors.estointernet.in/apache/maven/maven-3/3.6.3/binaries/a                          pache-maven-3.6.3-bin.tar.gz
+  828  tar -xvzf apache-maven-3.6.3-bin.tar.gz
+  829  ls
+  830  mv apache-maven-3.6.3 /opt/
+  831  mvn -v
+  832  yum install maven
+  833  cd /opt/
+  834  cd
+  835  wget http://apachemirror.wuchna.com/tomcat/tomcat-8/v8.5.50/bin/apache-to                          mcat-8.5.50.tar.gz
+  836  cp apache-tomcat-8.5.50.tar.gz /opt/
+  837  cd /opt/
+  838  tar -xvzf apache-tomcat-8.5.50.tar.gz
+  839  ls
+  840  ln -s /opt/apache-tomcat-8.5.50 /opt/tomcat8
+  841  ln -s /opt/tomcat8/bin/startup.sh /usr/local/bin/up
+  842  ln -s /opt/tomcat8/bin/shutdown.sh /usr/local/bin/down
+  843  up
+  844  down
+  845  alias start='/opt/tomcat8/bin/startup.sh'
+  846  alias stop='/opt/tomcat8/bin/shutdown.sh'
+  847  start
+  848  stop
+  849  cd /opt/tomcat8/conf
+  850  vi tomcat-users.xml
+  851  cd /opt/tomcat8/webapps/host-manager/META-INF
+  852  vi context.xml
+  853  cd /opt/tomcat8/webapps/manager/META-INF
+  854  vi context.xml
+  855  cd /opt/tomcat8/conf
+  856  vi server.xml
+  857  stop
+  858  start
+  859  mvn -v
+  860  clear
+  861  history
