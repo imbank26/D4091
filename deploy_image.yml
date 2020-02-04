@@ -1,0 +1,12 @@
+---
+- hosts: lb
+  remote_user: ec2-user
+  become: yes
+  become_method: sudo
+  tasks:
+  - name: Build Docker image from Dockerfile
+    docker_image:
+        name: web
+        path: /etc/ansible/playbooks/docker
+        state: build
+

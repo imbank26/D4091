@@ -1,0 +1,17 @@
+---
+- hosts: lb
+  user: ec2-user
+  become: yes
+  tasks:
+  - name: pull an image
+    docker_image:
+       name: centos
+       source: pull
+  - name: Create a data container
+    docker_container:
+       name: ngnix
+       image: centos
+       state: present
+       recreate: yes
+       exposed_ports:
+           - 80

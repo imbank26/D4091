@@ -1,0 +1,15 @@
+---
+- hosts: agent
+#  user: ec2-user
+  become: yes
+  tasks:
+      - name: Install EPEL release for nginx
+        command: amazon-linux-extras install epel -y
+
+      - name: Install nginx web server
+        yum: name=nginx state=installed update_cache=true
+        notify:
+          - start nginx
+  handlers:
+      - name: start nginx
+        service: name=nginx  state=started

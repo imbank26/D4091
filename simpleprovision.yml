@@ -1,0 +1,19 @@
+---
+- hosts: localhost
+  connection: local
+  vars_files:
+    - info/aws-credentials.yml
+  tasks:
+  - name: provisioning an instance
+    ec2:
+      aws_access_key: "{{ AWS_ACCESS_KEY_ID }}"
+      aws_secret_key: "{{ AWS_SECRET_ACCESS_KEY }}"
+      instance_type: t2.micro
+      key_name: key_aws
+      image: ami-09d069a04349dc3cb
+      region: us-east-1
+      group: sgaws
+      count: 1
+      vpc_subnet_id: subnet-50121a7e
+      wait: yes
+      assign_public_ip: yes
